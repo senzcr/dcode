@@ -7,7 +7,15 @@ export class Table extends HTMLElement {
     
     connectedCallback() {
         this.shadowRoot.innerHTML = `
-            
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+            </table>
         `;
     }
 }
