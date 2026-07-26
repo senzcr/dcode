@@ -6,7 +6,12 @@ export class Table extends HTMLElement {
     }
     
     connectedCallback() {
+        const headers = this.dataset.headers.split(",").map(header => header.trim());
+        
+        console.log(headers);
+        
         this.shadowRoot.innerHTML = `
+            <link rel="stylesheet" href="/components/Table.css" />
             <table>
                 <thead>
                     <tr>
